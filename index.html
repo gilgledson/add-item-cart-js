@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+        <meta charset="UTF-8">
+        <title>ADICIONAR PRODUTO AO CARRINHO COM INTEL XDK</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">  
+        <link rel="stylesheet" href="css/style.css"/>    
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+
+    <body>
+         
+       <div class="main">
+       
+        <div class="caixa">
+        <div class="topo">
+          <nav>
+             <a class="navegacao borde " href="index.html"><img src="img/home.png" width="16" /></a> 
+             <a class="navegacao borde" href="menu.html"><img src="img/menu.png" width="16" /></a> 
+             <a id="cart" class="navegacao"><img src="img/cart.png" class="img-nav" width="17" /> R$                 <span class="total"></span></a> 
+          </nav>         
+        </div><!--- topo -->
+         <div class="header">
+            <h3>Logo</h3>
+         </div>
+         </div>
+         <div class="containe">
+         <div class="divisoria1">
+         <div class="divisoria2">
+          <div class="cart">
+           
+            
+          </div> 
+          
+          </div><!--- divisoria2 -->
+           <div class="btn-finalizar">
+               <button onclick="limpar();" class="btn-limpar">Limpar carrinho</button><br>
+                <button class="btn-fim">Finalizar compra</button>
+          </div>
+         </div><!--- divisoria1 -->
+         </div><!-- containe -->
+          <div class="conteudo">
+                <div class='produto'>
+                   <div class='img-produto'>
+                    <img src='http://olhaquetendencia.esy.es/app/img/images.jpg' class='imagem-produto'/></div>
+                     <div class='produto-txt'><h4>titulo da pizza</h4>
+                      <h4 class='preco'>R$15,00</h4><button onclick="somar('titulo da pizza','15,00',this);" class='addcart'>Comprar</button>
+                      <p class='descricao'>massa,calabresa,molho especial, queijo, tomate e maionese.</p>
+                     </div>
+                     <div class='foot-produto'>
+                      <div class='isalar'><div class='sabor'>
+                        <button data-num-type='Metade' onclick='verificar(this,7.50);' class='checked'>Metade:R$7.50</button>
+                        <button onclick='verificar(this,5.50);' data-num-type='Broto' class='checked'>Broto:R$5.50</button>
+                        <button  onclick='verificar(this,15,00);' data-num-type='Tradicionar' class='checked'>Tradicional:R$15,00
+                        </button>     
+                        <button class='prg' onclick='prg1();'>Borda</button></div>
+                        <div class='bordas'><button data-bor-type='Chedar' onclick='bordar(this,4.00)' class='btn-borda'>Chedar:4.00</button>
+                          <button data-bor-type='Catupiri' onclick='bordar(this,4.00)' class='btn-borda'>Catupiri:4.00</button>
+                          <button data-bor-type='Mussarela'  onclick='bordar(this,4.00)' class='btn-borda'>Mussarela:4.00</button>
+                          <button class='prg' onclick='prg2();'>Pizza</button></div></div></div></dvi></div><div class='produto'>
+                          <div class='img-produto'>
+                          <img src='http://olhaquetendencia.esy.es/app/img/images.jpg' class='imagem-produto'/></div>
+                          <div class='produto-txt'><h4>Pizza de calabresa</h4><h4 class='preco'>R$15,00</h4>
+                            <button onclick="somar('Pizza de calabresa','15,00',this);" class='addcart'>Comprar</button>
+                            <p class='descricao'>calabresa, catupiri,cebola e etc..</p></div>
+                            <div class='foot-produto'><div class='isalar'><div class='sabor'>
+                              <button data-num-type='Metade' onclick='verificar(this,7.50);' class='checked'>Metade:R$7.50</button>
+                              <button onclick='verificar(this,5.50);' data-num-type='Broto' class='checked'>Broto:R$5.50</button>
+                              <button  onclick='verificar(this,15,00);' data-num-type='Tradicionar' class='checked'>Tradicional:R$15,00</button>   
+                                <button class='prg' onclick='prg1();'>Borda</button>
+                              </div>
+                              <div class='bordas'>
+                                <button data-bor-type='Chedar' onclick='bordar(this,4.00)' class='btn-borda'>Chedar:4.00</button>
+                                <button data-bor-type='Catupiri' onclick='bordar(this,4.00)' class='btn-borda'>Catupiri:4.00</button><button data-bor-type='Mussarela'  onclick='bordar(this,4.00)' class='btn-borda'>Mussarela:4.00</button><button class='prg' onclick='prg2();'>Pizza</button>
+                              </div>
+                            </div>
+                          </div>
+                        </dvi>
+                      </div>
+
+          </div>
+         <div class="navgation">
+            <ul class="menu-itens">
+                           <a href="#"><li class="pai-item">Menu principal</li></a>
+                           <a href="#"><li id="pai" class="pai-item">Pedir Pizza</li></a>
+                                <a href="#"><li class="sub-item">Pizza de Calabresa</li></a>  
+                                <a href="#"><li class="sub-item">Pizza de Queijo</li> </a>
+                                <a href="#"><li class="sub-item">Pizza de Peixe</li> </a>
+                           <a href="#"><li class="pai-item">Pedir Bebidas</li></a>
+                           <a href="#"><li class="pai-item">Informações</li></a>
+                           <a href="#"><li class="pai-item">Sobre Nós</li></a>
+                           
+                       </ul>            
+           </div>
+        <div class="footer">
+           
+           <span>Menu</span>
+         </div>
+      </div><!--main -->
+    </body>
+
+</html>
