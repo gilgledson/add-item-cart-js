@@ -194,7 +194,7 @@ function sub(preco,i){
   
   //remove os itens
   var itens = localStorage.getItem("itens"); 
-   var cont = i.getAttribute("data-num-type");
+  var cont = i.getAttribute("data-num-type");
   var resto = itens.split(";");   
   resto.splice(cont, 1); 
  
